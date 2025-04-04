@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our E-Library</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: #222;
+            color: #f0f0f0;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode main {
+            background-color: #333;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #9b59b6);
+            border-radius: 2px;
+        }
+
+        body.dark-mode h1 {
+            color: #f0f0f0;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 2rem;
+            font-size: 1.8rem;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+
+        body.dark-mode h2 {
+            color: #9b59b6;
+            border-left-color: #9b59b6;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        body.dark-mode .team-member {
+            background: #444;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 5px solid #f1f1f1;
+        }
+
+        body.dark-mode .team-member img {
+            border-color: #555;
+        }
+
+        .team-member h3 {
+            margin: 0.5rem 0;
+            color: #2c3e50;
+        }
+
+        body.dark-mode .team-member h3 {
+            color: #f0f0f0;
+        }
+
+        .team-member p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        body.dark-mode .team-member p {
+            color: #bbb;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        .logo img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>                
+                <li class="logo"><a href="home.html"><img src="images/logo.png" alt="E-Library Logo"></a></li>
+               <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><input type="text" placeholder="Search for books..."></li>
+                <li><button id="darkModeToggle">🌓 Dark Mode</button></li>
+                <li><a href="signup.html"><button>Sign up </button></a></li>
+                <li><a href="login.html"><button>Login</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>About Our E-Library</h1>
+        <p>Welcome to our digital library, where knowledge meets convenience. Our e-library was founded in 2025 with the mission to make reading accessible to everyone, anywhere, anytime.</p>
+        
+        <h2>Our Collection</h2>
+        <p>We host over 50,000 digital books across various genres including fiction, non-fiction, academic texts, and research papers. Our collection is constantly growing to serve our readers better.</p>
+        
+        <h2>Accessibility</h2>
+        <p>Our platform is designed to be user-friendly and accessible on all devices. Whether you're using a computer, tablet, or smartphone, you can enjoy our vast collection with ease.</p>
+        
+        <h2>Our Team</h2>
+        <p>We're a team of passionate book lovers, developers, and designers committed to creating the best digital reading experience for our users.</p>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Team Member">
+                <h3>Kanchan</h3>
+                <!-- <p>Chief Librarian</p> -->
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Team Member">
+                <h3>Shambhavi Mishra</h3>
+                <!-- <p>Lead Developer</p> -->
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Team Member">
+                <h3>Disha</h3>
+                <!-- <p>Content Curator</p> -->
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Team Member">
+                <h3>Kanishka Sharma</h3>
+                <!-- <p>Content Curator</p> -->
+            </div>
+        </div>
+    </main>
+
+    <script src="home.js"></script>
+    <script>
+        // Enhanced dark mode toggle with localStorage
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        // Check for saved user preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+        }
+        
+        darkModeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            
+            // Save user preference
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>
